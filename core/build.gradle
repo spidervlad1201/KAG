@@ -1,0 +1,23 @@
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+eclipse.project.name = appName + '-core'
+
+dependencies {
+  compile "com.badlogicgames.gdx:gdx:$gdxVersion"
+  compile "com.badlogicgames.gdx:gdx-ai:$aiVersion"
+  compile "com.badlogicgames.box2dlights:box2dlights:$box2dlightsVersion"
+  compile "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
+  compile "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+  compile "com.badlogicgames.ashley:ashley:$ashleyVersion"
+  compile "com.github.czyzby:gdx-websocket:$websocketVersion"
+  compile "net.dermetfan.libgdx-utils:libgdx-utils-box2d:$utilsBox2dVersion"
+  compile "net.dermetfan.libgdx-utils:libgdx-utils:$utilsVersion"
+  compile "com.github.czyzby:gdx-lml:$lmlVersion"
+  compile "com.github.czyzby:gdx-kiwi:$kiwiVersion"
+  compile "com.strongjoshua:libgdx-inGameConsole:$inGameConsoleVersion"
+  compile "com.github.czyzby:gdx-websocket-serialization:$websocketSerializationVersion"
+  compile "com.github.czyzby:gdx-lml-vis:$lmlVisVersion"
+  compile "com.kotcrab.vis:vis-ui:$visUiVersion"
+  compile "com.rafaskoberg.gdx:typing-label:$typingLabelVersion"
+  compile "de.tomgrill.gdxdialogs:gdx-dialogs-core:$dialogsVersion"
+}
+        
