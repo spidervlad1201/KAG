@@ -20,9 +20,7 @@ public class DesktopLauncher {
         configuration.title = "KnightsAndGoldmines";
         configuration.width = 640;
         configuration.height = 480;
-        for (int size : new int[] { 128, 64, 32, 16 }) {
-            configuration.addIcon("libgdx" + size + ".png", FileType.Internal);
-        }
+
         return configuration;
     }
 }
