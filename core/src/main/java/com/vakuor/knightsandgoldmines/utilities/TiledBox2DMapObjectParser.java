@@ -606,7 +606,19 @@ public class TiledBox2DMapObjectParser {
         Fixture fixture = body.createFixture(fixtureDef);
 
         fixture.setUserData(findProperty(aliases.userData, fixture.getUserData(), heritage, mapProperties, layerProperties,properties));
-        if(tile!=null) fixture.setUserData(tile);
+
+        if(tile!=null) {
+            TileCustomProperties prop = new TileCustomProperties();
+            prop.setTile(tile);
+            prop.setIsv(mapObject.isVisible());
+            fixture.setUserData(prop);
+
+            if (mapObject.getProperties().get("mask") != null) {
+                System.out.println(mapObject.getProperties().get("mask").toString());
+                System.out.println(Short.valueOf(mapObject.getProperties().get("mask").toString()));
+                fixtureDef.filter.maskBits = Short.valueOf(mapObject.getProperties().get("mask").toString());
+            }
+        }
         shape.dispose();
 
         fixtures.put(findAvailableName(mapObject.getName(), fixtures), fixture);
